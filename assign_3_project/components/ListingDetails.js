@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Image from "next/image";
 
 const ListingDetails = ({ listing }) => {
   return (
     <Container>
       <Row>
         <Col lg={6}>
-          <img
+          <Image
             onError={(event) => {
               event.target.onerror = null;
               event.target.src =
@@ -15,6 +16,9 @@ const ListingDetails = ({ listing }) => {
             className="img-fluid w-100"
             src={listing.images.picture_url}
             alt="Listing Image"
+            width={600}
+            height={400}
+            style={{ objectFit: "cover" }}
           />
           <br />
           <br />

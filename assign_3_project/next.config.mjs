@@ -2,11 +2,27 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "miro.medium.com",
-      "upload.wikimedia.org",
-      "blog.postman.com",
-      "chisellabs.com",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "miro.medium.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "blog.postman.com",
+      },
+      {
+        protocol: "https",
+        hostname: "chisellabs.com",
+      },
+      {
+        protocol: "https",
+        hostname: "a0.muscache.com",
+      },
     ],
   },
 };
